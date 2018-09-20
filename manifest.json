@@ -1,25 +1,22 @@
 {
+    "manifest_version": 2,
     "name": "Stock Tickers",
     "description": "My first Chrome App.",
-    "version": "0.1",
-    "manifest_version": 2,
-    "app": {
-      "background": {
-        "scripts": ["main.js"]
-      }
+    "version": "1.0",
+  
+    "browser_action": {
+      "default_icon": "ticker.png",
+      "default_popup": "index.html",
+      "default_title": "ticker"
     },
-    "page_action": {
-      "default_popup": "popup.html"
-    },
+
     "content_scripts": [
       {
-      "matches": [
-          "https://finance.yahoo.com/quote/AAPL"
-          ],
-      "js": ["content.js"],
-      "run_at": "document_end"        
+        "matches": ["<all_urls>"],
+        "css": ["mystyles.css"],
+        "js": ["content.js, jquery.js"]
       }
-    ], 
+    ],
 
-    "icons": { "16": "calculator-16.png", "128": "calculator-128.png" }
+    "permissions": ["activeTab"]
   }
