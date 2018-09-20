@@ -1,0 +1,23 @@
+#container {
+  display:grid;
+  grid-template-columns:33% 33% 33%;
+  grid-row-gap: 2px;
+}
+
+#tickerImage {
+    height: 20px;
+    grid-column: 1/2;
+    align-self: center;
+    margin-left: 15px;
+}
+
+input {
+    grid-column: 2/4;
+}
+button {
+    grid-row: 2;
+    font-size: .8em;
+    text-align: center;
+    background-color: rgb(59, 72, 215);
+}
+

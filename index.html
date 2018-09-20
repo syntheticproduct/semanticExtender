@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <style>
-     button {
-       height: 30px;
-       width: 30px;
-       outline: none;
-       margin: 10px;
-     }
-   </style>
-   <script src="main.js"></script>
- </head>
- <body>
-    <div>
-      <h1><center>ticker!</center></h1>
-      <p>This extension adds links to stock tickers (e.g. AAPL to <a href="http://finance.yahoo.com/AAPL">AAPL</a>).</p> 
-      <p></p>
+   <script src="jquery-3.3.1.slim.min.js"></script>
+   <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <div id="container">
+      <img src="ticker.png" id="tickerImage">
+      <input type="text" id="inputBox" placeholder="ticker">
+      <button name="Chart" type="submit" id="chartButton">chart</button>
+      <button name="Statistics" type="submit" id="statisticsButton">statistics</button>
+      <button name="Financials" type="submit" id="financialsButton">financials</button> 
     </div>
-    <center><div id="buttonDiv"></div></center>
- </body>
- <script src="options.js"></script>
-</html>
+  </body>
+  <script src="options.js"></script>
+  <script src="content.js"></script>
+  </html>
