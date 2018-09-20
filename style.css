@@ -18,6 +18,9 @@ button {
     grid-row: 2;
     font-size: .8em;
     text-align: center;
-    background-color: rgb(59, 72, 215);
+    background-color: rgb(59, 134, 215);
+    color: white;
 }
+
+
 

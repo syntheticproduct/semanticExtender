@@ -1,13 +1,22 @@
 
 $(document).ready(function() {
-    let ticker = 'AAPL';
-    let tickerregex = new RegExp(ticker, "gi");
-        //"<a href="https://finance.yahoo.com/quote/AAPL">AAPL</a\>"
-    let replace = "<a href=\"https://finance.yahoo.com/quote/" + ticker + "\">" + ticker +"</a>";
-    
-    var strNewString = $('.st').html().replace(tickerregex,replace);
-    $('.st').html(strNewString);
+    $("p").each(function( index ) {
+        let ticker = [  'AAPL','MSFT','SIRI','CMCSA','NLST','INTC','CPRT','EBAY','CSCO','QCOM','NFLX',
+                        'MRVL','HBAN','NEPT','AMAT','SBUX','FLEX','AGNC','GERN','NVDA','FITB','DLTR',
+                        'ETFC','ESRX','SYMC','TNDM','SNMX','MYL','AMZN','GPRO','ATVI','GILD','BIDU',
+                        'DISCA','ROST','CELG','IDTI','BBBY','NAVI','CTRP','RIGL','EXEL','AIMC','FB',
+                        'GOOGL','GOOG','DIS','TWTR','EA'];
+        let p_text = $(this).text();
+        for (let i = 0; i < ticker.length; i++) {
+            let search = ticker[i];
+            let replace = "<a href=\"https://finance.yahoo.com/quote/" + ticker[i] + "\">" + ticker[i] + "</a>";
+            console.log(search, replace);
+            p_text = p_text.replace(search, replace);     
+        }
+        $(this).html(p_text)
+    });
 });
+
 
 
 let inputBox = document.getElementById("inputBox");
